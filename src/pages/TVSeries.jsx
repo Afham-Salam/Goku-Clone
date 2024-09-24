@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { movies } from '../utils/Data'
 import { useEffect } from 'react'
 import Card from '../Components/Card'
-import Footer from '../Components/footer'
+
 
 function TVSeries() {
   const [count, setCount] = useState(0)

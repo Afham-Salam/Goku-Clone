@@ -7,7 +7,6 @@ import 'swiper/css/pagination';
 import { Autoplay, EffectFade, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Card from '../Components/Card';
-import Footer from '../Components/footer';
 import Search from '../Components/Search';
 
 
@@ -92,13 +91,10 @@ useEffect(()=>{
   modules={[Autoplay, Pagination, Navigation, EffectFade]} 
   className="w-full lg:h-[470px]"
 >
-      
-
         <SwiperSlide><img src="images/slidder1.jpg" alt="Slide 1" className="object-cover" /></SwiperSlide>
         <SwiperSlide><img src="images/slider2.jpg" alt="Slide 1" className="object-cover" /></SwiperSlide>
         <SwiperSlide><img src="images/slider3.jpg" alt="Slide 1" className="object-cover" /></SwiperSlide>
         <SwiperSlide><img src="images/slidder4.jpg" alt="Slide 4" className="object-cover" /></SwiperSlide>
-        
       </Swiper>
       
 
