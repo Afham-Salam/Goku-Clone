@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.bgcolor{
+    background-color: #323744;
+    box-shadow: -19px -130px 141px 147px #323744;
+    position: relative;
+    z-index: 10;
+}
