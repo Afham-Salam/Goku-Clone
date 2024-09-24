@@ -7,6 +7,7 @@ import 'swiper/css/pagination';
 import { Autoplay, EffectFade, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Card from '../Components/Card';
+
 import Search from '../Components/Search';
 
 
