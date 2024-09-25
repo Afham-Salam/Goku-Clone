@@ -16,7 +16,7 @@ const router = createBrowserRouter([
     element: <App />,
     children:[
       {
-        path:'/goku.sx',
+        path:'/',
         element:<Index />
       },
       {

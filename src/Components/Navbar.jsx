@@ -4,6 +4,7 @@ import Mobilemenu from "./Mobilemenu.jsx";
 import Search from "./Search.jsx";
 import List from "./List.jsx";
 import { NavLink } from "react-router-dom";
+import logoIcon from "../assets/logo.png";
 
 
 export default function Navbar() {
@@ -20,12 +21,12 @@ const[menu,setMenu]=useState(false)
         </div>
         <div className=" bg-slate-700 p-4 w-fit ">
         <NavLink
-            to="/goku.sx"
+            to="/"
             className={({ isActive, isPending }) =>
               isPending ? "pending" : isActive ? "active" : ""
             }
           >
-          <img className="lg:w-28 md:w-28 sm:w-24 w-24 h-full " src="src\assets\logo.png" />
+          <img className="lg:w-28 md:w-28 sm:w-24 w-24 h-full " src={logoIcon} />
 
         </NavLink>
         </div>
