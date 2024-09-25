@@ -1,19 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { genres, countries } from "../utils/Data.js";
 import List from './List'
+import { NavLink } from 'react-router-dom';
 
 export default function Mobilemenu() {
+  
+  const closeMenu = () => {
+    const navbar= document.getElementById("menu");
+    menu.style.display = "none";
+  };
   return (
     <div>
-        <div className='bg-black w-full md:w-screen  absolute top-[60px'>
+        <div className='bg-black w-full md:w-screen  absolute top-[60px' id="menu">
             <ul className='flex flex-col md:gap-5 md:p-4 gap-10 text-[12px] p-2'>
             <li className='text-white'>
-                <a href="">Home</a>
+                <NavLink to="/home" onClick={closeMenu}>Home</NavLink>
             </li>
            <hr className='opacity-25'></hr>
             <li className='text-white'>
                 <div className="flex">
-                <a href="">Genre</a>
+                <nav href="">Genre</nav>
                 <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -48,17 +54,14 @@ export default function Mobilemenu() {
                 </div>
                 <List data={countries} />
             </li>
-            <hr className='opacity-25'></hr>
-            <li className='text-white'>
-                <a href="">Movie</a>
-            </li >
+           
            <hr className='opacity-25'></hr>
             <li className='text-white'>
-                <a href="">TV Services</a>
+                <NavLink to="/tvseries" onClick={closeMenu}>TV Services</NavLink>
             </li>
             <hr className='opacity-25'></hr>
             <li className='text-white'>
-                <a href="">Top IMBD</a>
+                <NavLink to="/topimdb" onClick={closeMenu}>Top IMBD</NavLink>
             </li>
             <hr className='opacity-25'></hr>
 

@@ -10,6 +10,7 @@ import logoIcon from "../assets/logo.png";
 export default function Navbar() {
 const[active,setActive]=useState(false)
 const[menu,setMenu]=useState(false)
+
   return (
     <div className=" flex items-center justify-between  bg-black w-full h-[70px] relative z-50   ">
       <div className=" flex flex-row items-center m-0 p-0 ">
