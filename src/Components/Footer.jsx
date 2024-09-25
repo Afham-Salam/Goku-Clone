@@ -1,4 +1,5 @@
 import React from 'react'
+import logoIcon from "../assets/logo.png";
 
 export default function Footer() {
   return (
@@ -7,7 +8,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row  gap-2 md:gap-7 lg:gap-20 text-[14px]">
           <div>
           <div className="block md:hidden lg:hidden mb-5">
-         <img src="src/assets/logo.png" alt="Logo" className="mt-8 lg:mt-0 w-32 lg:w-36" />
+         <img src={logoIcon} alt="Logo" className="mt-8 lg:mt-0 w-32 lg:w-36" />
        </div>
             <p className=" font-semibold mb-3   text-[14px]">About Us</p>
             <ul className="space-y-2 ">
@@ -98,7 +99,7 @@ export default function Footer() {
         <div className="lg:flex flex-col items-end justify-between md:block hidden ">
          
 
-          <img src="src/assets/logo.png" alt="Logo" className="mt-8 lg:mt-0 w-32 lg:w-36" />
+          <img src={logoIcon} alt="Logo" className="mt-8 lg:mt-0 w-32 lg:w-36" />
         </div>
       </div>
     </div>

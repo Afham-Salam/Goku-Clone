@@ -7,10 +7,10 @@ import 'swiper/css/pagination';
 import { Autoplay, EffectFade, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Card from '../Components/Card';
-import {sliderimg1} from '../images/slidder1.jpg';
-import {sliderimg2} from '../images/slider2.jpg';
-import {sliderimg3} from '../images/slider3.jpg';
-import {sliderimg4} from '../images/slidder4.jpg';
+import sliderimg1 from '../assets/slidder1.jpg';
+import sliderimg2 from '../assets/slider2.jpg';
+import sliderimg3 from '../assets/slider3.jpg';
+import sliderimg4 from '../assets/slidder4.jpg';
 
 import Search from '../Components/Search';
 
