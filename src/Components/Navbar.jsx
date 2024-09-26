@@ -6,43 +6,55 @@ import List from "./List.jsx";
 import { NavLink } from "react-router-dom";
 import logoIcon from "../assets/logo.png";
 
-
 export default function Navbar() {
-const[active,setActive]=useState(false)
-const[menu,setMenu]=useState(false)
+  const [active, setActive] = useState(false);
+  const [menu, setMenu] = useState(false);
 
   return (
     <div className=" flex items-center justify-between  bg-black w-full h-[70px] relative z-50   ">
       <div className=" flex flex-row items-center m-0 p-0 ">
         <div className="lg:hidden md:block">
-        <svg onClick={()=>setMenu(!menu)} className="text-white pl-2"xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24"><path fill="currentColor" d="M3 18v-2h18v2zm0-5v-2h18v2zm0-5V6h18v2z"/></svg>
-        {
-         menu && <Mobilemenu />
-        }
+          <svg
+            onClick={() => setMenu(!menu)}
+            className="text-white pl-2"
+            xmlns="http://www.w3.org/2000/svg"
+            width="44"
+            height="44"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="M3 18v-2h18v2zm0-5v-2h18v2zm0-5V6h18v2z"
+            />
+          </svg>
+          {menu && <Mobilemenu />}
         </div>
         <div className=" bg-slate-700 p-4 w-fit ">
-        <NavLink
+          <NavLink
             to="/"
             className={({ isActive, isPending }) =>
               isPending ? "pending" : isActive ? "active" : ""
             }
           >
-          <img className="lg:w-28 md:w-28 sm:w-24 w-24 h-full " src={logoIcon} />
-
-        </NavLink>
+            <img
+              className="lg:w-28 md:w-28 sm:w-24 w-24 h-full "
+              src={logoIcon}
+            />
+          </NavLink>
         </div>
 
         <div className="ml-5"></div>
         <div className="lg:flex lg:gap-10 md:hidden hidden">
-        {
-          navitems.map(it => (
-             
-            <NavLink to={it.path} key={it.label} className={`text-white flex ${it.icon ? 'group' : ''}`}>
+          {navitems.map((it) => (
+            <NavLink
+              to={it.path}
+              key={it.label}
+              className={`text-white flex ${it.icon ? "group" : ""}`}
+            >
               {it.label}
-              {
-                it.icon===true && (
-                  <>
-                      <svg
+              {it.icon === true && (
+                <>
+                  <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
                     height="24"
@@ -54,19 +66,20 @@ const[menu,setMenu]=useState(false)
                     />
                   </svg>
                   <div className="dropdown absolute top-12 hidden group-hover:block">
-                    <List data={it.key=="genres"? genres:countries} />
+                    <List data={it.key == "genres" ? genres : countries} />
                   </div>
-                  </>
-                )
-              }
+                </>
+              )}
             </NavLink>
-          ))
-        }          
+          ))}
         </div>
       </div>
 
       <div className=" flex gap-6 mr-4">
-        <div className=" flex flex-row gap-2 justify-end" onClick={()=>setActive(!active)} >
+        <div
+          className=" flex flex-row gap-2 justify-end"
+          onClick={() => setActive(!active)}
+        >
           <div>
             <svg
               className="text-white text-2xl"
@@ -82,10 +95,12 @@ const[menu,setMenu]=useState(false)
             </svg>
           </div>
           <div>
-            <button className="text-white lg:block md:hidden hidden" >Search</button>
+            <button className="text-white lg:block md:hidden hidden">
+              Search
+            </button>
           </div>
         </div>
-      
+
         <div className=" flex flex-row gap-2 justify-end">
           <div>
             {" "}
@@ -104,16 +119,15 @@ const[menu,setMenu]=useState(false)
               />
             </svg>
           </div>
-         
+
           <div>
-            <button className="text-white lg:block md:hidden hidden">Login</button>
+            <button className="text-white lg:block md:hidden hidden">
+              Login
+            </button>
           </div>
         </div>
       </div>
-     {    
-            active &&<Search />
-     }
+      {active && <Search />}
     </div>
-    
   );
 }

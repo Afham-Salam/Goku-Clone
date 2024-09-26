@@ -21,20 +21,10 @@ function Home() {
   const[data,setData]=useState([]);
 
   const[active,setActive]=useState(false)
-useEffect(()=>{
-  fetch(url,{
-    headers:{
-      "x-rapidapi-key":"96f572f676msh233ae4e60d38ab8p161a67jsn31fd1bb2063e"
-    }
-  })
-  .then(response => response.json())
-  .then(data => setData(data))
-  .catch(error=> console.error("Error"))
-  console.log({data});
 
-},[url])
   return (
     <>
+  
    <section className='flex bg-[#282c37] lg:h-[525px]'>
   <div className='lg:w-[750px] lg:h-[470px]  bgcolor  lg:flex lg:flex-col justify-center  gap-7 p-14 md:hidden hidden '>
     <h1 className='text-white text-[30px]'>Over <span className='text-[#f04f24]'>66,000 </span>Movies and TV Show Episodes available and still updating. Enjoy your Free HD Streaming Now!</h1>
@@ -109,7 +99,9 @@ useEffect(()=>{
 }
 
 
+
 <section className='bg-[#181b22] grid grid-cols-2 md:grid-cols-4 xl:grid-cols-8 h-fit gap-4 p-5 py-10'>
+  
 {
   movies.map(it => (
     <>
